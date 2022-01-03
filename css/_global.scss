@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Circular Std';
+    src: url('../font/CircularStd-Medium.woff2') format('woff2'),
+        url('../font/CircularStd-Medium.woff') format('woff'),
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../font/Poppins-Light.woff') format('woff')
+}
+/*Global*//*Global*//*Global*/
+* , .container-fluid, .row, .col-lg-6, .col-6, a, ul, li{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    color: black;
+    font-family: 'Poppins'; 
+    &:hover{
+        color: $colorBlue;
+    }
+}
+body{
+    background-color: white;
+    transition: 0.5s;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(255, 49, 49);
+}
+h1,h2,h3,h4 {
+    font-family: 'Circular Std';
+    text-transform: uppercase;
+    color: $colorTitle;
+}
+p{
+    font-family: 'Poppins'; 
+    font-size: 1.1vw;
+}
+.cursor{
+    @extend %cursor
+}
+span {
+    display: block;
+}
+.txt-detail h2{
+    line-height: 1;
+}
+.container-expo h2, .txt h2, .right h1{
+    line-height: 0.85;
+}
+#cookies{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+    padding: 40px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+    display: none;
+    .txt-cookies{
+        width: 50%;
+        margin: auto;
+        p{
+            margin-bottom: 30px
+        }
+        #btn{
+            @extend %btnCookies;
+            &:hover{
+                background-color: $colorBlue;
+                color: white;
+            }
+         }
+    }
+}
+.txt-detail, .menu, .event, .footer{
+    width: 90%;
+    margin: auto;
+}
+.parallax, .intro, .contact, .ticket {
+    height: 100vh;
+}
+/*menu*//*menu*//*menu*//*menu*//*menu*/
+.navbar {
+    position: fixed;
+    top: 0;
+    padding: 22px 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.200);
+        li {
+            list-style-type: none;
+            position: relative;
+            a {
+                position: relative;
+                width: fit-content;
+                text-decoration: none;
+                margin-left: 40px;
+               @extend %hoverLien
+            }
+        }
+}
+#all {
+    overflow: hidden;
+}
+/*footer*//*footer*//*footer*/
+footer{
+    border-top: 0.5px solid rgba(0, 0, 0, 0.200);
+    padding: 30px 0;
+    background-color: white;
+    .Rsociaux{
+        text-align: center;
+        li{
+            display: inline-block;
+        }
+    }
+    .flecheUp{
+        text-align: right;
+        cursor: pointer;
+        i{
+            font-size: 50px;
+        }
+    }
+}

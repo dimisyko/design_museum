@@ -1,0 +1,71 @@
+$colorAfter : #F5F5F5;
+$colorTitle : #525252;
+$colorMenu : rgb(233, 0, 0);
+$espaceSection : 12%;
+$colorBlue : #93A6E3;
+$colorYellow : #FFD300;
+
+%centerObs{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+%centerFlex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+}
+%flexTitle{
+    display: flex;
+    flex-direction: column;
+}
+%After{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+%cursor{
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  border: 1px solid black;
+    pointer-events: none;
+}
+%btnCookies{
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid $colorBlue;
+  color: $colorBlue
+}
+
+%hoverLien{
+  &::after{
+    @extend %After;
+    top: 100%;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: $colorMenu;
+    transition: transform 0.5s;
+    z-index: 10;
+}
+&:hover, &.active{
+    color: $colorMenu;
+    &::after{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+&.active{
+    color: $colorMenu
+}
+}
