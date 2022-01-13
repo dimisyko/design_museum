@@ -54,7 +54,6 @@ function animImg(){
     if(listImg){
     var PosBounding = listImg.getBoundingClientRect().top - window.innerHeight / 3.5
     var stopAnim = false
-    
     if(PosBounding > window.innerHeight || -PosBounding > window.innerHeight){
 listImg.style.transform = 'translate3d('+stopAnim+'px, 0px, 0px)'
     }else{
@@ -98,7 +97,6 @@ gsap.from(imgsExpo,{
     }
 })
 })
-
 /* recuperer la couleur de la data pour l'appliquer sur le ::after*/
 function AfterColorExpo(){
     var afterExpo = document.querySelector('.intro')
@@ -152,26 +150,27 @@ document.getElementById('cookies').style.display = 'none'
 })
  
 $(document).ready(function() {
-
     /* btnTop */
     $('.flecheUp i').click(function(){
         $("html, body").animate({scrollTop: 0}, 80);
+    })
+       /* btnCallToAction */
+    $('.cta').click(function(){
+        $(this).fadeOut();
+        $('form').fadeIn();
     })
   /*form*/
         $('form').validetta({
                 onValid : function(e){
                     e.preventDefault();
-
                     $.ajax({
                         url: 'message_ajax.html',
                         type : 'POST',
                         data: $(this.form).serialize(),
 
-                        success: function(traitement){
-
-                            $(".erreur").html(traitement);
-                                      gsap.to('fieldset>div,form p',{duration: 0.8, stagger: 0.2, y : '-100%', opacity:0, delay:0.5})
- 
+                        success: function(message){
+                            $(".erreur").html(message);
+                            gsap.to('fieldset>div,form p',{duration: 0.8, stagger: 0.2, y : '-100%', opacity:0, delay:0.5})
                             setTimeout(function() {
                             $('form').fadeOut()
                             }, 2000);

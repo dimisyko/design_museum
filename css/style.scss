@@ -433,10 +433,13 @@
 .ticket-right{
     @extend %centerFlex;
     background-color: $colorBlue;
+    position: relative;
+    height: 100vh;
 form{
     width: 65%;
     margin: auto;
     padding: 35px 0;
+    display: none;
 label{
     margin: 40px 0 10px 0;
     color: white;
@@ -475,6 +478,14 @@ label{
         padding: 2px 13px;
     }
 }
+}
+.cta{
+   @extend %centerObs;
+   @extend %btnCookies;
+   background-color: transparent;
+   color: white;
+   border: 1px solid white;
+   font-size: 20px;
 }
 }
 }
@@ -611,7 +622,7 @@ main .container-grid, .ticket .row .ticket-left{
         margin-bottom: 50px;
     }
 }
-.carre .txt .txt{
+.carre .txt{
     padding: 10% 0;
 }
 .intro{
@@ -648,9 +659,6 @@ footer .Rsociaux li {
     margin: auto;
     font-size: 8vw
 }
-.carre .txt{
-    padding: 10% 0;
-}
 }
 @media screen and (max-width : 768px){
 .navbar-brand{
@@ -665,7 +673,7 @@ footer .Rsociaux li {
 .parallax .image-txt:nth-child(1) {
     grid-column: 4/7;
 }
-.info-museum .txt, .list_img{
+.info-museum .txt, .list-img{
     padding: 20% 0 !important;
 }
 p{
