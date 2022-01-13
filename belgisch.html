@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="description" content="Site sur Design Museum Brussels">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Design Museum Brussels</title>
 </head>
-<body data-barba="wrapper">
-    <!--NAV--><!--NAV--><!--NAV-->
+
+<body>
+    <!--NAV-->
+    <!--NAV-->
+    <!--NAV-->
+    <div id="all">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid d-flex justify-content-between menu">
-          <a class="navbar-brand link" href="index.html">Logo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="link" href="index.html">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="link active" href="musee.html">Le musée</a>
-              </li>
-              <li class="nav-item">
-                <a class="link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand link" href="index.html"><img src="img/logo.svg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link active" href="musee.html">Le musée</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-    
-        <div id="all" data-barba="container" data-barba-namespace="expo">
-    
-            <header class="container-fluid intro" data-color="#FFD300">
-                <div class="container-container">
+    </nav>
+
+        <header class="container-fluid intro" data-color="#FFD300">
+            <div class="container-container">
                 <div class="row event">
-                <div class="col-lg-6 col-md-12 left">
-                    <div class="image">
-                        <img src="img/expo_3.jpg" alt="belgisch" class="transi-img">
+                    <div class="col-lg-6 col-md-12 left">
+                        <div class="image">
+                            <img src="img/expo_3.webp" alt="belgisch" class="transi-img">
+                        </div>
                     </div>
-                </div>
                     <div class="col-lg-6 col-md-12 right d-flex flex-column justify-content-between">
                         <h1 class="d-flex flex-column" data-color="#FFD300">
                             <span class="span-expo align-self-start stagger">Belgisch</span>
@@ -50,74 +55,93 @@
                             <span class="span-expo align-self-center stagger">belge</span>
                         </h1>
                         <p>Disponible toute l'année - 2022<br><i class="fas fa-arrow-down"></i></p>
+                    </div>
                 </div>
             </div>
-        </div>
-            </header>
-            <!--MAIN-->
-            <!--MAIN-->
-            <!--MAIN-->
-            <main class="main-expo">
+        </header>
+        <!--MAIN-->
+        <!--MAIN-->
+        <!--MAIN-->
+        <main class="main-expo">
+            <div class="container-txt">
+                <span class="info">Information sur l'exposition</span>
                 <div class="txt-detail row align-items-center">
-                    <h2 class="col-lg-6 col-md-12">Belgisch<br> design<br>belge</be></h2>
-                    <p class="col-lg-6 col-md-12">Il est conçu comme un laboratoire sous forme de pop-ups qui se succéderont dans le temps. Les pièces de la collection permanente d’objets plastiques du musée dialoguent actuellement avec des pièces de la collection de design de la Fondation Roi Baudouin. Proposant un dialogue aussi inattendu qu’interpellant, les chronologies, les typologies et la fonction s’entrecroisent et nous invitent à une réflexion sur le statut de l’objet, le rapport que nous entretenons avec le design et son utilisation au quotidien.</p>
+                    <h2 class="col-lg-6 col-md-12">Belgisch<br> design<br>belge</be>
+                    </h2>
+                    <p class="col-lg-6 col-md-12">Il est conçu comme un laboratoire sous forme de pop-ups qui se
+                        succéderont dans le temps. Les pièces de la collection permanente d’objets plastiques du musée
+                        dialoguent actuellement avec des pièces de la collection de design de la Fondation Roi Baudouin.
+                        Proposant un dialogue aussi inattendu qu’interpellant, les chronologies, les typologies et la
+                        fonction s’entrecroisent et nous invitent à une réflexion sur le statut de l’objet, le rapport
+                        que nous entretenons avec le design et son utilisation au quotidien.</p>
                 </div>
-                <div class="container-grid">
-                    <div class="Txt_img">
-                        <img src="img/belgisch1.jpg" alt="">
-                    </div>
-                    <div class="Txt_img">
-                        <img src="img/belgisch2.jpg" alt="">
-                    </div>
-                    <div class="Txt_img">
-                        <p>Ils travaillent dans leurs studios d’Athènes et de New York en se concentrant sur la création d’installations de natures mortes et d’environnements d’objets empiriques, qui illustrent leur attrait pour la matérialité, le concept et les expériences spatiales tangibles.</p>
-                    </div>
-                    <div class="Txt_img">
-                        <img src="img/belgisch3.jpg" alt="">
-                    </div>
-                    <div class="Txt_img">
-                        <p>Comme annoncé lors de l’ouverture, cette espace accueillera régulièrement de nouvelles pièces venant nourrir et enrichir le propos. Dès mars prochain, 5 nouvelles pièces rejoindront cette première édition de BELGISCH DESIGN BELGE</p>
-                    </div>
-                    <div class="Txt_img">
-                        <img src="img/belgisch4.jpg" alt="">
-                    </div>
+            </div>
+            <div class="container-grid">
+                <div class="Txt_img">
+                    <img src="img/belgisch1.webp" alt="Belgisch1">
                 </div>
-                <section class="autre-Event">
-                    <h3> <a href="crush.html" class="link">Autre événement :
-                   Crush <i class="fas fa-arrow-right"></i></a></h3>
-                </section>
-            </main>
-           <!--Footer--> <!--Footer-->
-           <footer>
+                <div class="Txt_img">
+                    <img src="img/belgisch2.webp" alt="Belgisch2">
+                </div>
+                <div class="Txt_img">
+                    <p>Ils travaillent dans leurs studios d’Athènes et de New York en se concentrant sur la création
+                        d’installations de natures mortes et d’environnements d’objets empiriques, qui illustrent leur
+                        attrait pour la matérialité, le concept et les expériences spatiales tangibles.</p>
+                </div>
+                <div class="Txt_img">
+                    <img src="img/belgisch3.webp" alt="Belgisch3">
+                </div>
+                <div class="Txt_img">
+                    <p>Comme annoncé lors de l’ouverture, cette espace accueillera régulièrement de nouvelles pièces
+                        venant nourrir et enrichir le propos. Dès mars prochain, 5 nouvelles pièces rejoindront cette
+                        première édition de BELGISCH DESIGN BELGE</p>
+                </div>
+                <div class="Txt_img">
+                    <img src="img/belgisch4.webp" alt="Belgisch4">
+                </div>
+            </div>
+            <section class="autre-Event">
+                <h3> <a href="crush.html" class="link">Autre événement :
+                        Crush <i class="fas fa-arrow-right"></i></a></h3>
+            </section>
+        </main>
+        <!--Footer-->
+        <!--Footer-->
+        <footer>
             <div class="row footer align-items-center">
-                    <div class="col-4 LogoFooter">
-                        <div class="logo">Logo</div>
-                    </div>
-                    <div class="col-4 Rsociaux">
-                        <ul>
-                            <li><a href="https://www.instagram.com/designmuseumbrussels/" target="_blank" rel="noopener">Instagram - </a></li>
-                            <li><a href="https://www.facebook.com/DesignMuseumBrussels/" target="_blank" rel="noopener"> Facebook</a></li>
-                        </ul>
-                        </div>
-                        <div class="col-4 flecheUp"><i class="fas fa-arrow-up"></i></div>
-           </div>
-         </footer>
-        </div>
-        <div id="cookies">
+                <div class="col-4 LogoFooter">
+                    <div class="logo"><img src="img/logo.svg" alt="logo"></div>
+                </div>
+                <div class="col-4 Rsociaux">
+                    <ul>
+                        <li><a href="https://www.instagram.com/designmuseumbrussels/" target="_blank" rel="noopener"><i
+                                    class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/DesignMuseumBrussels/" target="_blank" rel="noopener"><i
+                                    class="fab fa-facebook-f"></i> Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 flecheUp"><i class="fas fa-arrow-up"></i></div>
+            </div>
+        </footer>
+    </div>
+    <div id="cookies">
 
-            <div class="txt-cookies">
-            <p>Les cookies nous permettent de vous proposer nos services plus facilement. En utilisant nos services, vous nous donnez expressément votre accord pour exploiter ces cookies.</p>
-            <a href="#" id="btn">Accepter</a>
+        <div class="txt-cookies">
+            <p>En cliquant sur Accepter, vous acceptez le stockage de cookies sur votre appareil
+                pour améliorer la navigation sur le site.</p>
+            <a href="#">Accepter</a>
         </div>
-    
-        </div>
-        <div class="cursor"></div>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/gsap.min.js"></script>
-        <script src="js/ScrollTrigger.min.js"></script>
-        <script src="js/js.cookie.min.js"></script>
-        <script src="js/script.js"></script>
-    </body>
-    
-    </html>
+
+    </div>
+    <div class="cursor"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/validetta.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

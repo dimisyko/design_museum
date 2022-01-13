@@ -5,43 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="description" content="Site sur Design Museum Brussels">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Design Museum Brussels</title>
 </head>
 
-<body data-barba="wrapper">
-<!--NAV--><!--NAV--><!--NAV-->
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid d-flex justify-content-between menu">
-      <a class="navbar-brand link" href="index.html">Logo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="link" href="index.html">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="link" href="musee.html">Le musée</a>
-          </li>
-          <li class="nav-item">
-            <a class="link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-    <div id="all" data-barba="container" data-barba-namespace="musee">
-
-        <header class="home container-fluid">
-            <div class="image imgClip">
-                <img src="img/img_home.jpg" alt="home" class="scale">
+<body>
+    <!--NAV-->
+    <!--NAV-->
+    <!--NAV-->
+    <div id="all">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid d-flex justify-content-between menu">
+            <a class="navbar-brand HoverJs link" href="index.html"><img src="img/logo.svg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="link HoverJs" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link HoverJs active" href="musee.html">Le musée</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="link HoverJs" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <h1>Design museum</h1>
-        </header>
+        </div>
+    </nav>
+
+    <header class="home container-fluid">
+        <div class="container-home">
+            <div class="container-center">
+                <div class="element-absolute">
+                    <img src="img/img_musee2.webp" alt="chaise" class="imgClip">
+                </div>
+                <div class="element-absolute">
+                    <img src="img/img_musee1.webp" alt="oiseau" class="imgClip">
+                </div>
+                <h1 class="txt d-flex flex-column justify-content-center align-items-center">
+                    <span class="stagger align-self-start">Design</span>
+                    <span class="stagger align-self-end">Museum</span>
+                    <span class="stagger align-self-center">Brussels</span>
+                </h1>
+            </div>
+            <div class="scroll-down">Défiler<br><i class="fas fa-arrow-down"></i></div>
+        </div>
+    </header>
         <!--MAIN-->
         <!--MAIN-->
         <!--MAIN-->
@@ -49,7 +65,7 @@
 
             <section class="container-fluid img-scale">
                 <div class="image-scale">
-                    <img src="img/facade-musee.jpg" alt="musee_face">
+                    <img src="img/facade-musee.webp" alt="musee_face">
                 </div>
             </section>
 
@@ -71,173 +87,201 @@
             <section class="container-fluid list-img">
                 <div class="list-img-anim d-flex">
                     <div class="image">
-                        <img src="img/list_img1.jpg" alt="chaise1">
+                        <img src="img/list_img1.webp" alt="chaise1">
                     </div>
                     <div class="image">
-                        <img src="img/list_img2.jpg" alt="chaiseFace">
+                        <img src="img/list_img5.webp" alt="oiseau">
                     </div>
                     <div class="image">
-                        <img src="img/list_img3.jpg" alt="objet">
+                        <img src="img/list_img3.webp" alt="objet">
                     </div>
                     <div class="image">
-                        <img src="img/list_img4.jpg" alt="tabouret">
+                        <img src="img/list_img4.webp" alt="tabouret">
                     </div>
                     <div class="image">
-                        <img src="img/list_img5.jpg" alt="oiseau">
+                        <img src="img/list_img2.webp" alt="chaiseFace">
                     </div>
                 </div>
 
             </section>
-
             <section class="container-fluid section-exposition">
-                <div class="exposition">
-                    <div class="txt-expo">
+                <div class="txt-expo">
                     <h3>un programme d’expositions<br>
                         temporaires</h3>
-                        <p>le Design Museum Brussels explore également les autres champs de la création en design et ses impacts sur la société et notre vie quotidienne.</p>
-                          <p> À travers ses expositions mais aussi ses visites guidées, ses workshops, ses conférences et ses événements, le musée ambitionne de rendre le design compréhensible et accessible à tou×te×s.</p>
-                    </div>
-                    <div class="image"></div>
+                    <p>le Design Museum Brussels explore également les autres champs de la création en design et ses
+                        impacts sur la société et notre vie quotidienne.</p>
+                    <p> À travers ses expositions mais aussi ses visites guidées, ses workshops, ses conférences et
+                        ses événements, le musée ambitionne de rendre le design compréhensible et accessible à
+                        tou×te×s.</p>
+                </div>
+                <div class="image"></div>
+
+            </section>
+
+            <section class="container-fluid bg-fixed">
+                <div class="bg-transi">
                 </div>
             </section>
 
-        <section class="current-exposition d-flex">
-            <div class="container-fluid container-expo" id="expo">
-            <h2 class="d-flex flex-column">
-                <span class="span-exposition align-self-start">Les</span>
-                <span class="span-exposition">expositions</span>
-                <span class="span-exposition">
-                  <div class="d-flex align-items-center"> actuellements <i class="fas fa-arrow-right"></i></div> </span>
-            </h2>
-        </div>
-        <div class="container-fluid container-expo">
-            <a href="crush.html" class="container-img link">
-                    <h3>
-                        <span class="stagger-expo">  Crush </span>
-                    </h3>
-            <div class="image transi-img" data-bg="#93A6E3">
-                <img src="img/img_crush.jpg" alt="crush">
-            </div>
-            <span class="date">21.10.2021 > 06.03.2022</span>
-        </a>
-        </div>
-        <div class="container-fluid container-expo">
-            <a href="stading.html" class="container-img link">
-                <h3>
-                  <span class="stagger-expo">  Standing </span>
-                 <span class="stagger-expo"> stones </span>
-                </h3>
-            <div class="image transi-img" data-bg="#c0c0c0">
-                <img src="img/Expo_2.jpg" alt="standing">
-            </div>
-            <span class="date">Prolongée jusqu'au 01.02.2022</span>
-        </a>
-            <span class="bg-title">Expositions</span>
-        
-        </div>
-        <div class="container-fluid container-expo">
-            <a href="belgisch.html" class="container-img link">
-                    <h3>
-                      <span class="stagger-expo">Belgisch</span>
-                      <span class="stagger-expo">Design</span>
-                      <span class="stagger-expo">Belge</span>
-                      </h3>
-            <div class="image transi-img" data-bg="#FFD300">
-                <img src="img/expo_3.jpg" alt="belgisch">
-            </div>
-            <span class="date">Disponible toute l'année - 2022</span>
-        </a>
-        </div>
-        </section>
+            <section class="bg-gray">
+                <div class="actuelle-exposition d-flex">
+                <div class="container-fluid container-expo" id="expo">
+                    <h2 class="d-flex flex-column">
+                        <span class="span-exposition align-self-start">Les</span>
+                        <span class="span-exposition">expositions</span>
+                        <span class="span-exposition">
+                            <div class="d-flex align-items-center"> actuellements <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </span>
+                    </h2>
+                </div>
+                <div class="container-fluid container-expo">
+                    <a href="crush.html" class="container-img link">
+                        <h3>
+                            <span class="stagger-expo"> Crush </span>
+                        </h3>
+                        <div class="arrowExpo">
+                            <img src="img/arrowExpo.svg" alt="">
+                        </div>
+                        <div class="image transi-img" data-bg="#93A6E3">
+                            <img src="img/img_crush.webp" alt="crush">
+                        </div>
+                        <span class="date">21.10.2021 > 06.03.2022</span>
+                    </a>
+                </div>
+                <div class="container-fluid container-expo">
+                    <a href="stading.html" class="container-img link">
+                        <h3>
+                            <span class="stagger-expo"> Standing </span>
+                            <span class="stagger-expo"> stones </span>
+                        </h3>
+                        <div class="arrowExpo">
+                            <img src="img/arrowExpo.svg" alt="">
+                        </div>
+                        <div class="image transi-img" data-bg="#dddddd">
+                            <img src="img/Expo_2.webp" alt="standing">
+                        </div>
+                        <span class="date">Prolongée jusqu'au 01.02.2022</span>
+                    </a>
+                    <span class="bg-title">Expositions</span>
 
-        </main>        
+                </div>
+                <div class="container-fluid container-expo">
+                    <a href="belgisch.html" class="container-img link">
+                        <h3>
+                            <span class="stagger-expo">Belgisch</span>
+                            <span class="stagger-expo">Design</span>
+                            <span class="stagger-expo">Belge</span>
+                        </h3>
+                        <div class="arrowExpo">
+                            <img src="img/arrowExpo.svg" alt="arrow Expo">
+                        </div>
+                        <div class="image transi-img" data-bg="#FFD300">
+                            <img src="img/expo_3.webp" alt="belgisch">
+                        </div>
+                        <span class="date">Disponible toute l'année - 2022</span>
+                    </a>
+                </div>
+            </div>
+            </section>
         <section class="container-fluid ticket">
             <div class="row">
-            <div class="col-lg-6 ticket-left">
-                <div class="carre">
-                    <div class="txt">
-                    <h2>Tentez de gagner un ticket pour :</h2>
+                <div class="col-lg-6 ticket-left">
+                    <div class="carre carre1 col-12">
+                        <div class="txt">
+                            <h2>Tentez de gagner un ticket pour :</h2>
+                        </div>
+                    </div>
+                    <div class="row flex-bloc">
+                        <div class="bloc col-lg-6 col-12">
+                            <div class="carre carre2">
+                                <div class="txt">
+                                    <h3>Crush</h3>
+                                    <p>21.10.2021 > 06.03.2022</p>
+                                </div>
+                            </div>
+                            <div class="carre carre3">
+                                <div class="txt">
+                                    <h3>Belgisch Design<br> belge</h3>
+                                    <p>Prolongée jusqu'au 01.02.2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carre carre4 col-lg-6 col-12">
+                            <div class="txt">
+                                <h3>Standing<br> Stones</h3>
+                                <p>Disponible toute l'année - 2022</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-lg-6 ticket-right">
+                    <form action="#" method="POST">
+                        <fieldset>
+                            <div class="container-nom">
+                                <label for="nom">Nom</label>
+                                <input type="text" id="nom" name="nom" data-validetta="required,minLength[3]" data-vd-message-required="Les champs sont vides">
+                            </div>
+                            <div class="container-prenom">
+                                <label for="prenom">Prénom</label>
+                                <input type="text" id="prenom" name="prenom" data-validetta="required,minLength[3]" data-vd-message-required="Les champs sont vides">
+                            </div>
+                            <div class="container-email">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" data-validetta="required,email" data-vd-message-required="Les champs sont vides" data-vd-message-equalto="L'adresse mail n'est pas identique" data-vd-message-email="Adresse e-mail non valide">
+                            </div>
+                            <div class="container-confirm">
+                                <label for="emailconfirm">Confirmation mail</label>
+                                <input type="text" id="emailconfirm" name="emailconfirm" data-validetta="required,email,equalTo[email]" data-vd-message-required="Les champs sont vides" data-vd-message-equalto="L'adresse mail n'est pas identique" data-vd-message-email="Adresse e-mail non valide">
+                            </div>
+                            <p class="erreur"></p>
+                            <div class="container-btn d-flex justify-content-end">
+                                <button type="reset" class="btn btn-outline-primary reset">Annuler</button>
+                                <button type="submit" data-dismiss="alert" aria-label="close" class="btn btn-primary go">Valider</button>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
-                <div class="carre">
-                    <div class="txt">
-                    <h3>Crush</h3>
-                    <p>21.10.2021 > 06.03.2022</p>
-                </div>
-                </div>
-                <div class="carre">
-                    <div class="txt">
-                        <h3>Belgisch Design<br> belge</h3>
-                        <p>21.10.2021 > 06.03.2022</p>
-                </div>
-                </div>
-                <div class="carre">
-                    <div class="txt">
-                        <h3>Standing<br> Stones</h3>
-                    <p>21.10.2021 > 06.03.2022</p>
-                </div>
-                </div>
-
             </div>
-            <div class="col-lg-6 ticket-right">
-            <form action="#" method="POST">
-                <div class="container-nom">
-                    <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom">
+        </section>
+    </main>
+        <!--Footer-->
+        <!--Footer-->
+        <footer>
+            <div class="row footer align-items-center">
+                <div class="col-4 LogoFooter">
+                    <div class="logo"><img src="img/logo.svg" alt="logo"></div>
                 </div>
-                <div class="container-prenom">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" id="prenom" name="prenom">
+                <div class="col-4 Rsociaux">
+                    <ul>
+                        <li><a href="https://www.instagram.com/designmuseumbrussels/" target="_blank" rel="noopener"><i
+                                    class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.facebook.com/DesignMuseumBrussels/" target="_blank" rel="noopener">
+                                <i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    </ul>
                 </div>
-                <div class="container-email">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="container-confirm">
-                    <label for="emailconfirm">Confirmation mail</label>
-                    <input type="email" id="emailconfirm" name="emailconfirm">
-                </div>
-                <p class="erreur"></p>
-                <div class="container-btn d-flex justify-content-end">
-                    <button type="reset" class="btn btn-outline-primary reset">Annuler</button>
-                    <button type="submit" class="btn btn-primary go">Valider</button>
-                </div>
-            </form>
-        </div>
-    </div>
-       </section>
-                   <!--Footer--> <!--Footer-->
-<footer>
-    <div class="row footer align-items-center">
-            <div class="col-4 LogoFooter">
-                <div class="logo">Logo</div>
+                <div class="col-4 flecheUp"><i class="fas fa-arrow-up"></i></div>
             </div>
-            <div class="col-4 Rsociaux">
-                <ul>
-                    <li><a href="https://www.instagram.com/designmuseumbrussels/" target="_blank" rel="noopener">Instagram - </a></li>
-                    <li><a href="https://www.facebook.com/DesignMuseumBrussels/" target="_blank" rel="noopener"> Facebook</a></li>
-                </ul>
-                </div>
-            <div class="col-4 flecheUp"><i class="fas fa-arrow-up"></i></div>
-   </div>
- </footer>
+        </footer>
     </div>
-    <div id="cookies">
+   <div id="cookies">
 
         <div class="txt-cookies">
-        <p>Les cookies nous permettent de vous proposer nos services plus facilement. En utilisant nos services, vous nous donnez expressément votre accord pour exploiter ces cookies.</p>
-        <a href="#" id="btn">Accepter</a>
-    </div>
+            <p>En cliquant sur Accepter, vous acceptez le stockage de cookies sur votre appareil
+                pour améliorer la navigation sur le site.</p>
+            <a href="#">Accepter</a>
+        </div>
 
     </div>
-<div class="cursor">
-</div>
+    <div class="cursor">
+    </div>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/js.cookie.min.js"></script>
+    <script src="js/validetta.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
