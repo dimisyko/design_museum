@@ -1,4 +1,6 @@
-/*Animation scroll Accueil*/
+function animGsap(){
+    tlInter()
+ /*Animation scroll Accueil*/
 let animHome = gsap.timeline({
     scrollTrigger :{
         trigger : '.home',
@@ -25,7 +27,7 @@ let scaleImg = gsap.timeline({
 scaleImg.to('.image-scale', {
     width : '100vw',
     height : '100vh',
-})
+}) 
 /*Transition fond noir*/
 let bgTransi = gsap.timeline({
     scrollTrigger :{
@@ -38,6 +40,32 @@ let bgTransi = gsap.timeline({
 bgTransi.to('.bg-transi', {
     height : '100%',
 })
+/*Scroll horizontale*/
+let sect = gsap.utils.toArray('.container-expo')
+var expo = document.querySelector('.actuelle-exposition')
+if(expo){
+gsap.to(expo,{
+xPercent : -100 * (sect.length - 1),
+    scrollTrigger :{
+        trigger : '.actuelle-exposition',
+        start : 'center center',
+        pin : true,
+        scrub : 0.8,
+        end : () => "+=" +expo.offsetWidth
+    }
+})
+}
+let imgExpo = document.querySelectorAll('.Txt_img img')
+imgExpo.forEach(function(imgsExpo){
+gsap.from(imgsExpo,{
+    clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",duration : 1,
+    scrollTrigger :{
+        trigger : imgsExpo,
+        start : 'top center',
+    }
+})
+})
+}
 /*Curseur*/
 function cursor(e){
     var curseur = document.querySelector('.cursor')
@@ -72,31 +100,6 @@ img.forEach(function(imgs){
         document.querySelector('.bg-gray').style.backgroundColor = '#525252'
     })
 })
-/*Scroll horizontale*/
-let sect = gsap.utils.toArray('.container-expo')
-var expo = document.querySelector('.actuelle-exposition')
-if(expo){
-gsap.to(expo,{
-xPercent : -100 * (sect.length - 1),
-    scrollTrigger :{
-        trigger : '.actuelle-exposition',
-        start : 'center center',
-        pin : true,
-        scrub : 0.8,
-        end : () => "+=" +expo.offsetWidth
-    }
-})
-}
-let imgExpo = document.querySelectorAll('.Txt_img img')
-imgExpo.forEach(function(imgsExpo){
-gsap.from(imgsExpo,{
-    clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",duration : 1,
-    scrollTrigger :{
-        trigger : imgsExpo,
-        start : 'top center',
-    }
-})
-})
 /* recuperer la couleur de la data pour l'appliquer sur le ::after*/
 function AfterColorExpo(){
     var afterExpo = document.querySelector('.intro')
@@ -123,8 +126,6 @@ function tlInter(){
     gsap.to('.title',{duration: 1,  y:"0%", opacity:1, delay : 0.8, stagger: 0.4}),
     gsap.to('.image-txt',{duration: 0.7,  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 0.4, delay: 0.4})
 }
- tlInter()
-
  /*transition page*/
 var link = document.querySelectorAll('.link')
 link.forEach(function(liens){
@@ -150,6 +151,7 @@ document.getElementById('cookies').style.display = 'none'
 })
  
 $(document).ready(function() {
+    animGsap()
     /* btnTop */
     $('.flecheUp i').click(function(){
         $("html, body").animate({scrollTop: 0}, 80);

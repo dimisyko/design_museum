@@ -5,11 +5,11 @@ $espaceSection : 12%;
 $colorBlue : #93A6E3;
 $colorYellow : #FFD300;
 
-%centerObs{
+@mixin centerObs($top, $left, $x, $y){
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: $top;
+    left: $left;
+    transform: translate($x,$y);
   }
 %centerFlex{
         display: flex;
@@ -21,11 +21,11 @@ $colorYellow : #FFD300;
     display: flex;
     flex-direction: column;
 }
-%After{
+@mixin After ($top, $left){
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  top: $top;
+  left: $left;
   z-index: -1;
 }
 
@@ -40,7 +40,7 @@ $colorYellow : #FFD300;
     pointer-events: none;
     mix-blend-mode: difference;
 }
-%btnCookies{
+%btn{
   border: 1px solid #525252;
   border-radius: 20px;
   padding: 3px 10px;
@@ -52,7 +52,7 @@ $colorYellow : #FFD300;
 }
 %hoverLien{
   &::after{
-    @extend %After;
+    @include After(0, 0);
     top: 100%;
     height: 2px;
     width: 100%;
