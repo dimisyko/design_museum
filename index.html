@@ -6,9 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Site sur Design Museum Brussels">
-  <link rel="preload" href="font/CircularStd-Medium.woff" as="font" type="font/woff">
-  <link rel="preload" href="font/CircularStd-Medium.woff2" as="font" type="font/woff2">
-  <link rel="preload" href="font/Poppins-Light.woff" as="font" type="font/woff">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -18,23 +15,23 @@
 
 <body>
   <section class="container-fluid parallax" id="scene">
-    <div class="image-txt" data-depth="0.6">
+    <div class="image-txt" data-v="3">
       <img src="img/logo_para.svg" alt="carre bleu">
       <a href="musee.html" class="link">Entrée dans le musée <i class="fas fa-arrow-right"></i> </a>
     </div>
-    <div class="image-txt" data-depth="-0.6">
+    <div class="image-txt" data-v="6">
       <img src="img/img_parallax1.webp" alt="carre bleu">
     </div>
-    <div class="image-txt" data-depth="0.4">
+    <div class="image-txt" data-v="4">
       <img src="img/img_parallax3.webp" alt="carre bleu">
     </div>
-    <div class="image-txt" data-depth="-0.6">
+    <div class="image-txt" data-v="-4">
       <img src="img/img_parallax2.webp" alt="carre bleu">
     </div>
-    <div class="image-txt" data-depth="0.3">
+    <div class="image-txt" data-v="12">
       <img src="img/img_parallax4.webp" alt="carre bleu">
     </div>
-    <div class="image-txt" data-depth="0.5">
+    <div class="image-txt" data-v="-9">
       <img src="img/img_parallax5.webp" alt="carre bleu">
     </div>
     </div>
@@ -55,19 +52,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  <script src="js/validetta.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
-  <script src="js/parallax.min.js"></script>
   <script src="js/script.js"></script>
-  <script>
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
-  </script>
 </body>
 
 </html>
