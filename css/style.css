@@ -33,13 +33,13 @@
   mix-blend-mode: difference;
 }
 
-#cookies .txt-cookies a, footer .Rsociaux li a, .parallax .image-txt:nth-child(1) a, .ticket .row .ticket-right .cta, .ticket .ticket-left .ticket-right .cta {
+#cookies .txt-cookies a, footer .Rsociaux li a, .parallax .enterMuseum .link-enter, .ticket .row .ticket-right .cta, .ticket .ticket-left .ticket-right .cta {
   border: 1px solid #525252;
   border-radius: 20px;
   padding: 3px 10px;
 }
 
-#cookies .txt-cookies a:hover, footer .Rsociaux li a:hover, .parallax .image-txt:nth-child(1) a:hover, .ticket .row .ticket-right .cta:hover, .ticket .ticket-left .ticket-right .cta:hover {
+#cookies .txt-cookies a:hover, footer .Rsociaux li a:hover, .parallax .enterMuseum .link-enter:hover, .ticket .row .ticket-right .cta:hover, .ticket .ticket-left .ticket-right .cta:hover {
   color: white;
   background-color: #525252;
   border: 1px solid #525252;
@@ -105,12 +105,22 @@
   list-style-type: none;
 }
 
+::-moz-selection {
+  background-color: #e90000;
+  color: #FFD300;
+}
+
+::selection {
+  background-color: #e90000;
+  color: #FFD300;
+}
+
 .imgClip, .image-scale, .container-img .image, .parallax, main .container-grid .Txt_img img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.intro, .image-txt, .contact, .intro .container-container .left .image img {
+.intro, .animPara, .contact, .intro .container-container .left .image img {
   -webkit-clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 }
@@ -282,31 +292,30 @@ footer .logo {
 /*Parallax*/
 .parallax {
   position: relative;
-  overflow: hidden;
+}
+
+.parallax .enterMuseum {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  width: 25%;
+}
+
+.parallax .enterMuseum .image-txt:nth-child(1) {
+  position: initial;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .parallax .image-txt {
   position: absolute;
   width: 20%;
-}
-
-.parallax .image-txt:nth-child(1) {
-  text-align: center;
-  width: 25%;
-  padding: 10px;
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-.parallax .image-txt:nth-child(1) img {
-  padding-bottom: 7%;
-}
-
-.parallax .image-txt:nth-child(1) a {
-  text-align: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .parallax .image-txt:nth-child(2) {

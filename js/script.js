@@ -1,6 +1,5 @@
 function animGsap(){
     tlInter()
- /*Animation scroll Accueil*/
 let animHome = gsap.timeline({
     scrollTrigger :{
         trigger : '.home',
@@ -15,7 +14,6 @@ animHome.to('.imgClip', {
 animHome.from('h1, .scroll-down', {
     opacity : 1,
 }, "0.2")
-/*Agrandissement image*/
 let scaleImg = gsap.timeline({
     scrollTrigger :{
         trigger : '.img-scale',
@@ -28,7 +26,6 @@ scaleImg.to('.image-scale', {
     width : '100vw',
     height : '100vh',
 }) 
-/*Transition fond noir*/
 let bgTransi = gsap.timeline({
     scrollTrigger :{
         trigger : '.bg-fixed',
@@ -40,7 +37,6 @@ let bgTransi = gsap.timeline({
 bgTransi.to('.bg-transi', {
     height : '100%',
 })
-/*Scroll horizontale*/
 let sect = gsap.utils.toArray('.container-expo')
 var expo = document.querySelector('.actuelle-exposition')
 if(expo){
@@ -66,17 +62,17 @@ gsap.from(imgsExpo,{
 })
 })
 }
-/*Curseur*/
 function cursor(e){
     var curseur = document.querySelector('.cursor')
-    var x = e.pageX - 10
-    var y = (e.pageY - window.pageYOffset) - 10
+    var posCursor = {
+        x : e.pageX - 10,
+        y : (e.pageY - window.pageYOffset) - 10
+    }
     setTimeout(function() {
-    curseur.style.transform = 'translate3d('+x+'px, '+y+'px, 0px)'
+    curseur.style.transform = 'translate3d('+posCursor.x+'px, '+posCursor.y+'px, 0px)'
 }, 80);
 }
 document.addEventListener('mousemove', cursor)
-/*defilement Axe X image*/
 function animImg(){
     var listImg = document.querySelector('.list-img-anim')
     if(listImg){
@@ -90,7 +86,6 @@ listImg.style.transform = 'translate3d('+stopAnim+'px, 0px, 0px)'
 }
 }
 window.addEventListener('scroll', animImg)
-/*Change couleur background au survol des expo*/
 var img = document.querySelectorAll('.container-expo .image')
 img.forEach(function(imgs){
     imgs.addEventListener('mousemove', function(){
@@ -100,7 +95,6 @@ img.forEach(function(imgs){
         document.querySelector('.bg-gray').style.backgroundColor = '#525252'
     })
 })
-/* recuperer la couleur de la data pour l'appliquer sur le ::after*/
 function AfterColorExpo(){
     var afterExpo = document.querySelector('.intro')
     if(afterExpo){
@@ -109,14 +103,13 @@ function AfterColorExpo(){
 }
 }
 AfterColorExpo()
- /*transition page*/
 function tlLeave(){
     return gsap.to('.transi-img',{duration : 1, clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", ease:Expo.easeInOut}),
     gsap.to('.stagger',{duration: 0.5, stagger : 0.15, y: "-60%", opacity : 0}),
     gsap.to('.intro, .contact',{duration : 0.6, clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)", delay : 0.8}),
     gsap.to('.stagger-expo',{duration: 0.5, stagger : 0.12, y: "-100%", opacity : 0}),
     gsap.to('.bg-title, .right p, .date, .mail, .home, .img-scale, .info-museum, .list-img, .section-exposition, .ticket, footer, .main-expo, .arrowExpo img',{duration : 1, opacity : 0}),
-    gsap.to('.parallax .image-txt',{duration: 0.5,  opacity: 0, stagger: 0.14})
+    gsap.to('.animPara',{duration: 0.5,  opacity: 0, stagger: 0.1})
 }
 function tlInter(){
    return gsap.to('.intro, .contact',{duration : 2, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"}),
@@ -124,9 +117,8 @@ function tlInter(){
     gsap.from('.stagger',{duration: 0.5, stagger : 0.15, y: "60%", opacity : 0,delay : 1.5}),
     gsap.to('.imgClip',{duration: 1.6, opacity:1 ,ease:Expo.easeInOut}),
     gsap.to('.title',{duration: 1,  y:"0%", opacity:1, delay : 0.8, stagger: 0.4}),
-    gsap.to('.image-txt',{duration: 0.7,  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 0.4, delay: 0.4})
+    gsap.to('.animPara',{duration: 0.7,  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 0.4, delay: 0.4})
 }
- /*transition page*/
 var link = document.querySelectorAll('.link')
 link.forEach(function(liens){
     liens.addEventListener('click', function(e){
@@ -138,46 +130,48 @@ link.forEach(function(liens){
     }, 1400);
 })
 })
-/*Parallax*/
-function parallax(e){
-    const img = document.querySelectorAll('.image-txt')
-    img.forEach(function(el) {
-        var data = el.getAttribute('data-v')
-        var x = (window.innerWidth - e.clientX * data) / 100
-        var y = (window.innerHeight - e.clientY * data) / 100
-        el.style.transform = 'translate3d('+x+'px, '+y+'px, 0px)'
+    const imgPara = document.querySelectorAll('.image-txt')
+    imgPara.forEach(function(el) {
+        el.addEventListener('mousemove', function(e){
+        var posCursor ={
+            x : e.offsetX - 90,
+            y : e.offsetY - 80
+        }
+        el.style.transform = 'translate3d('+posCursor.x+'px, '+posCursor.y+'px, 0px)'
     })
+    el.addEventListener('mouseleave', function(){
+        el.style.transform = ''
+    })
+})
+function cookieSite(){
+    document.cookie = "cookie=valider;path=/;max-age=50000000"
+    document.getElementById('cookies').style.display = 'none'
 }
-document.addEventListener('mousemove', parallax)
-/*cookies*/
-var valeurcookie = Cookies.get('moncookie');
-if (valeurcookie != "accepte") {
+
+var getCookie = document.cookie
+var cookie = getCookie.substring(getCookie.indexOf('v'), getCookie.length)
+
+if(cookie != 'valider'){
     document.getElementById('cookies').style.display = 'block'
 }
-document.querySelector('.txt-cookies a').addEventListener('click', function(e){
-    e.preventDefault()
-    Cookies.set('moncookie', 'accepte', { expires: 365 });
-document.getElementById('cookies').style.display = 'none'
-})
- 
+
+document.querySelector('.txt-cookies a').addEventListener('click', cookieSite)
+
 $(document).ready(function() {
     animGsap()
-    /* btnTop */
     $('.flecheUp i').click(function(){
         $("html, body").animate({scrollTop: 0}, 80);
     })
-       /* btnCallToAction */
     $('.cta').click(function(){
         $(this).fadeOut();
         $('form').fadeIn();
     })
-        /* Formulaire */
         var nom = $('#nom')
         var prenom = $('#prenom')
         var email = $('#email')
         var confirMail = $('#emailconfirm')
         var symbole = /^(([^<>()[\]\\.,;:#\s@"]+(\.[^<>()[\]\\.,;:#\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    
+
         $('form').submit(function(e){
             e.preventDefault()
     

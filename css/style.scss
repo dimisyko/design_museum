@@ -3,23 +3,26 @@
 /*Parallax*/
 .parallax{
     position: relative;
-    overflow: hidden;
+        .enterMuseum{
+            @include centerObs(50%, 50%, -50%,-50%); 
+            text-align: center;
+            width: 25%;
+            .link-enter{
+                @extend %btn;
+            }
+        .image-txt{
+            &:nth-child(1){
+                position: initial;
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
     .image-txt{
         position: absolute;
         width: 20%;
-        &:nth-child(1){
-            text-align: center;
-            width: 25%;
-            padding: 10px;
-            @include centerObs(40%, 40%, 0,0);
-            img{
-                padding-bottom: 7%
-            }
-            a{
-                @extend %btn;
-                text-align: center;
-            }
-        }
+        transition: 0.2s;
         &:nth-child(2){
             top: 50%;
             left: 5%;

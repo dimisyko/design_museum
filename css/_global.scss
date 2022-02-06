@@ -17,10 +17,14 @@
     text-decoration: none;
     list-style-type: none;
 }
+::selection{
+    background-color: $colorMenu;
+    color: $colorYellow;
+}
 .imgClip, .image-scale, .container-img .image, .parallax, main .container-grid .Txt_img img{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-.intro, .image-txt, .contact, .intro .container-container .left .image img{
+.intro, .animPara, .contact, .intro .container-container .left .image img{
     clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 }
 img{
