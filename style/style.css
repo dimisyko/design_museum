@@ -83,13 +83,13 @@
 
 @font-face {
   font-family: 'Circular Std';
-  src: url("../font/CircularStd-Medium.woff2") format("woff2"), url("../font/CircularStd-Medium.woff") format("woff");
+  src: url("../assets/font/CircularStd-Medium.woff2") format("woff2"), url("../assets/font/CircularStd-Medium.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url("../font/Poppins-Light.woff") format("woff");
+  src: url("../assets/font/Poppins-Light.woff") format("woff");
   font-display: swap;
 }
 
@@ -544,7 +544,7 @@ footer .logo {
 }
 
 .section-exposition .image {
-  background-image: url(../img/parallax_img.webp);
+  background-image: url(../assets/img/parallax_img.webp);
   background-size: cover;
   height: 75vh;
   width: 68%;

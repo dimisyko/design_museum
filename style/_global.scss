@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Circular Std';
-    src: url('../font/CircularStd-Medium.woff2') format('woff2'),
-        url('../font/CircularStd-Medium.woff') format('woff');
+    src: url('../assets/font/CircularStd-Medium.woff2') format('woff2'),
+        url('../assets/font/CircularStd-Medium.woff') format('woff');
     font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
-    src: url('../font/Poppins-Light.woff') format('woff');
-    font-display: swap;
+    src: url('../assets/font/Poppins-Light.woff') format('woff');
+    font-display: swap
 }
 /*Global*//*Global*//*Global*/
 * , .container-fluid, .row, .col-lg-6, .col-6, a, ul, li, .d-flex{
