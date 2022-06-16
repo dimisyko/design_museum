@@ -231,7 +231,7 @@ span {
   top: -12px;
   left: -30px;
   z-index: -1;
-  content: url(../img/arrowExpoBlack.svg);
+  content: url(../assets/img/arrowExpoBlack.svg);
   width: 30px;
   z-index: 1;
 }

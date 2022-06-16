@@ -108,7 +108,7 @@ span {
                @extend %hoverLien;
                &::before{
                 @include After(-12px, -30px);
-                content: url(../img/arrowExpoBlack.svg);
+                content: url(../assets/img/arrowExpoBlack.svg);
                 width: 30px;
                 z-index: 1;
             }
