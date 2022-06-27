@@ -12,8 +12,12 @@
 </head>
 
 <body>
-    <div class="bg-transition"></div>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="bg">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="bg-transition">
+          <path fill="red" d="M 0 100 L 0 100 L 100 100 L 100 0 C 50 0 50 0 0 0"/>
+        </svg>
+      </div>
+    <nav class="navbar navbar-expand-lg navbar-light opacity">
         <div class="container-fluid d-flex justify-content-between menu">
             <a class="navbar-brand link" href="index"><img src="assets/img/logo.svg" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -32,7 +36,7 @@
             </div>
         </div>
     </nav>
-    <header class="container-fluid contact row">
+    <header class="container-fluid contact row opacity">
         <div class="col-lg-4 image-bg">
             <img src="assets/img/img_contact.webp" alt="facade-musee">
         </div>
@@ -75,7 +79,7 @@
     <footer>
         <div class="row footer align-items-center">
             <div class="col-4 LogoFooter">
-                <div class="logo"><img src="assets/img/logo.svg" alt="logo"></div>
+                <a href="index" class="logo link"><img src="assets/img/logo.svg" alt="logo"></a>
             </div>
             <div class="col-4 Rsociaux">
                 <ul>

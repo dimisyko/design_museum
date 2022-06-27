@@ -33,15 +33,20 @@ li,
 .Txt_img img {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-.bg-transition{
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    transform: scaleY(1);
-    transform-origin: top;
-    background-color: $colorMenu;
-    z-index: 999;
+.bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	pointer-events: none;
+	.bg-transition{
+		width: 100%;
+		height: 100%;
+	}
+}
+.opacity{
+	opacity: 0;
 }
 img {
 	width: 100%;
@@ -184,5 +189,6 @@ footer {
 	}
 	.logo {
 		width: 130px;
+		display: block;
 	}
 }
