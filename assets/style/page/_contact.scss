@@ -1,0 +1,37 @@
+.contact{
+    .image-bg{
+        padding: 122px 0 0 0;
+        height: 100vh;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .container-contact{
+        padding: 122px 0 0 0;
+        .container-flex{
+            height: 100%;
+            border-top: 0.5px solid rgba(0, 0, 0, 0.200);
+        .txt_contact{
+            @extend %centerFlex;
+            height: auto;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.200);
+            border-right: 0.5px solid rgba(0, 0, 0, 0.200);
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+        }
+    }
+    .mail{
+        height: 20%;
+        @extend %centerFlex;
+        a{
+            font-size: 3.5vw;
+            text-transform: uppercase;
+            font-family: 'Circular Std';
+            color: $colorBlue;
+            text-decoration: underline;
+        }
+    }
+    }

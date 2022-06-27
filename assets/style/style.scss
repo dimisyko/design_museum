@@ -1,0 +1,220 @@
+@import './abstracts/global';
+@import './abstracts/var';
+
+@import './page/parallax';
+@import './page/home';
+@import './page/single';
+@import './page/contact';
+
+
+
+/* responsive *//* responsive *//* responsive */
+@media screen and (max-width : 1200px){
+    .cursor{
+        visibility: hidden;
+    }
+        .section-exposition .txt-expo {
+            position: initial;
+            padding: 0;
+            width: 90%;
+            margin: 0 auto 5% auto;
+            p{
+                width: 100%;
+            }
+        }
+        .section-exposition .image {
+            background-position: 70%;
+            height: 70vh;
+            width: 90%;
+            margin: auto;
+        }
+        .container-expo:nth-child(odd) .container-img {
+            top: 21%;
+        }
+        p{
+            font-size: 1.8vw;
+        }
+        .info-museum .txt p {
+            width: 100%;
+        }
+        .carre .txt p{
+            font-size: 15px;
+        }
+    }
+@media screen and (max-width : 992px){
+    .container-expo h2 {
+        font-size: 7vw;
+        width: 60vw
+}
+.home{
+    .container-home .element-absolute{
+    width: 30%;
+}
+   .container-home .element-absolute:nth-child(2){
+    left: 5%;
+}
+   .container-home .element-absolute:nth-child(3){
+    font-size: 8vw;
+}
+}
+nav ul{
+    background-color: #f1f1f1;
+    li{
+        margin: 10px 0;
+    }
+}
+.ticket {
+.row{
+    height: 50%;
+}
+}
+.event{
+    margin: 15% auto 0 auto;
+    .list-img .list-img-anim .image {
+        width: 45%;
+    }
+}
+.container-expo .container-img, .intro .container-container .event .left .image {
+    width: 45%
+}
+.intro .container-container .event .left .image {
+    width: 50vw
+}
+.main-expo, .ticket .row .ticket-right form, .info-museum .txt{
+    width: 90%;
+    margin: auto;
+}
+main .container-grid, .ticket .row .ticket-left{
+    display: block;
+    .Txt_img{
+        margin-bottom: 10%;
+    }
+}
+.intro .container-container .event .right{
+    width: 60vw;
+    margin:7% auto 0 auto;
+    padding: 0;
+    h1{
+        font-size: 9vw;
+        margin-bottom: 50px;
+    }
+}
+.carre .txt{
+    padding: 10% 0;
+}
+.intro{
+    &::after{
+        width: 100%;
+        height: 40%;
+    }
+}
+main .autre-Event h3 {
+    font-size: 3.5vw;
+}
+.contact, .ticket{
+height: auto;
+.image-bg{
+    height: 50vh;
+}
+.container-contact{
+    height: 50%;
+    padding: 0;
+}
+.txt_contact{
+    padding: 50px 0;
+}
+}
+footer .Rsociaux li {
+    margin: 10px 5px;
+    white-space: nowrap;
+}
+.container-txt .txt-detail h2 {
+    font-size: 5.5vw;
+    margin-bottom: 30px;
+}
+.info-museum .txt h2 {
+    margin: auto;
+    font-size: 8vw
+}
+}
+@media screen and (max-width : 768px){
+.navbar-brand{
+    width: 30%;
+}
+.section-exposition .txt-expo h3 {
+    font-size: 4.5vw;
+}
+.container-expo .container-img{
+        width: 10vw;
+}
+.info-museum .txt, .list-img{
+    padding: 20% 0 !important;
+}
+p{
+    font-size: 18px;
+}
+.container-expo {
+    h2{
+        font-size: 8vw;
+    }
+    .container-img h3{
+        font-size: 7.5vw;
+    }
+}
+.container-form{
+    width: 90%;
+}
+.span-expo{
+    &:nth-child(1){
+        padding-left: 0 !important;
+    }
+}
+span{
+    line-height: 1.1;
+}
+   .contact .txt_contact{
+        padding: 50px 0;
+    }
+}
+@media screen and (max-width : 576px){
+    .info-museum .txt h2{
+    width: 75%;
+    font-size: 9vw;
+    }
+    footer .Rsociaux li a {
+        font-size: 12px;
+    }
+    .carre .txt{
+        padding: 20% 0;
+    }
+    footer .logo{
+        width: 110px;
+    }
+    .section-exposition .image {
+        height: 40vh;
+    }
+    .list-img .list-img-anim .image {
+        width: 45%;
+    }
+    p{
+        font-size: 13px;
+    }
+    .container-expo{
+    &:nth-child(odd) .container-img{
+        top: 15%;
+    }
+}
+.container-expo .container-img .date{
+    font-size: 13px;
+}
+.container-txt .txt-detail h2 {
+    font-size: 7vw;
+    margin-bottom: 30px;
+}
+.home .container-home .txt {
+    font-size: 8vw;
+}
+.contact .mail a{
+    font-size: 5vw;
+}
+}

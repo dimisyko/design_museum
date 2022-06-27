@@ -1,0 +1,332 @@
+.home {
+	margin-bottom: 25%;
+	.container-home {
+		position: relative;
+		height: 100vh;
+		.element-absolute {
+			position: absolute;
+			width: 22%;
+			z-index: -1;
+		}
+		.container-center {
+			@include centerObs(50%, 50%, -50%, -50%);
+			width: 100%;
+			height: 40vw;
+		}
+		.txt {
+			width: 45%;
+			color: #525252;
+			font-size: 6.8vw;
+			margin: auto;
+			height: 100%;
+			span {
+				&:nth-child(3) {
+					z-index: -1;
+					padding-left: 8%;
+				}
+			}
+		}
+		.element-absolute:nth-child(2) {
+			left: 15%;
+			bottom: 5%;
+			transform: rotate(8deg);
+		}
+		.element-absolute:nth-child(1) {
+			top: 8%;
+			left: 63%;
+			transform: rotate(-8deg);
+		}
+		.scroll-down {
+			position: absolute;
+			bottom: 5%;
+			left: 50%;
+			text-align: center;
+			font-size: 20px;
+			transform: translateX(-50%);
+		}
+	}
+}
+/*ScaleImg*/ /*ScaleImg*/ /*ScaleImg*/
+.img-scale {
+	height: 100vh;
+	padding: 0;
+	.image-scale {
+		width: 40%;
+		height: 50vh;
+		margin: auto;
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+/*InfoMuseum*/ /*InfoMuseum*/ /*InfoMuseum*/
+.info-museum {
+	position: relative;
+	&::after {
+		@include After(0, 0);
+		height: 100%;
+		width: 40%;
+		background-color: $colorYellow;
+	}
+	.txt {
+		padding: $espaceSection 0;
+		width: 80%;
+		margin: auto;
+		h2 {
+			font-size: 6vw;
+			width: 55%;
+			@extend %flexTitle;
+		}
+		p {
+			width: 60%;
+			margin: 7% auto 0;
+		}
+	}
+}
+/*ListImg*/ /*ListImg*/ /*ListImg*/
+.list-img {
+	position: relative;
+	padding: $espaceSection 0;
+	&::after {
+		@include After(0, 40%);
+		background-color: rgb(250, 250, 250);
+		height: 60%;
+		width: 60%;
+		left: 40%;
+	}
+	.list-img-anim {
+		margin: 5% 0 5% -10%;
+		.image {
+			width: 25%;
+			margin: 0 20px;
+			flex-shrink: 0;
+		}
+	}
+}
+.bg-fixed {
+	height: 100vh;
+	.bg-transi {
+		height: 0;
+	}
+}
+/*Exposition*/ /*Exposition*/ /*Exposition*/
+.section-exposition {
+	position: relative;
+	padding: $espaceSection 0 5% 0;
+	&::after {
+		@include After(0, 0);
+		height: 70%;
+		width: 100%;
+		background-color: $colorBlue;
+	}
+	.txt-expo {
+		position: absolute;
+		top: 7vw;
+		left: 5vw;
+		h3 {
+			font-size: 3.5vw;
+			color: white;
+			margin-bottom: 5%;
+		}
+		p {
+			width: 23vw;
+			color: white;
+		}
+	}
+	.image {
+		background-image: url(../../assets/img/parallax_img.webp);
+		background-size: cover;
+		height: 75vh;
+		width: 68%;
+		margin-left: auto;
+		background-attachment: fixed;
+	}
+}
+/*currentExposition*/ /*currentExposition*/ /*currentExposition*/
+.bg-gray,
+.bg-transi {
+	background-color: #525252;
+	transition: background-color 0.5s;
+}
+.container-expo {
+	position: relative;
+	flex-shrink: 0;
+	width: 100vw;
+	height: 100vh;
+	&:nth-child(1) {
+		&::after {
+			@include After(60%, 0);
+			height: 40vh;
+			width: 30%;
+			background-color: $colorYellow;
+		}
+	}
+	&:nth-child(even) .container-img {
+		bottom: 7%;
+	}
+	&:nth-child(odd) .container-img {
+		top: 15%;
+	}
+	.container-img {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 27%;
+		margin: auto;
+		h3 {
+			position: absolute;
+			top: -8%;
+			right: -40%;
+			font-size: 5vw;
+			white-space: nowrap;
+			text-align: right;
+			z-index: 100;
+			color: white;
+		}
+		.arrowExpo {
+			position: absolute;
+			left: -10vw;
+			top: 30%;
+			width: 27%;
+		}
+		.image {
+			overflow: hidden;
+			height: 100%;
+			&:hover img {
+				transform: scale(1.2);
+			}
+			img {
+				transition: transform 0.7s;
+			}
+		}
+		.date {
+			color: white;
+			margin-top: 15px;
+		}
+	}
+	.bg-title {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: rgba(121, 121, 121, 0.158);
+		font-size: 25em;
+		z-index: -1;
+		pointer-events: none;
+	}
+	h2 {
+		margin: auto;
+		font-size: 6vw;
+		width: 50vw;
+		color: white;
+		@extend %centerFlex;
+		.span-exposition {
+			i {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+/*Ticket*/
+.carre1,
+.carre2,
+.carre3,
+.carre4 {
+	@extend %centerFlex;
+}
+.ticket {
+	.row,
+	.ticket-left {
+		height: 100%;
+		.ticket-left {
+			.carre1 {
+				background-color: $colorTitle;
+				text-align: center;
+				height: 30%;
+				.txt {
+					h2 {
+						color: white;
+						line-height: 1.1;
+					}
+				}
+			}
+			.flex-bloc {
+				height: 70%;
+				.carre2 {
+					height: 50%;
+					background-color: $colorBlue;
+					h3,
+					p {
+						color: white;
+					}
+				}
+				.carre3 {
+					background-color: $colorYellow;
+					height: 50%;
+				}
+				.carre4 {
+					background-color: #e2e2e2;
+				}
+			}
+		}
+		.ticket-right {
+			@extend %centerFlex;
+			background-color: $colorBlue;
+			position: relative;
+			height: 100vh;
+			form {
+				width: 65%;
+				margin: auto;
+				padding: 35px 0;
+				display: none;
+				label {
+					margin: 40px 0 10px 0;
+					color: white;
+				}
+				input {
+					width: 100%;
+					outline: none;
+					display: block;
+					border: none;
+					border-bottom: 0.5px solid white;
+					background-color: transparent;
+				}
+				.erreur {
+					margin-top: 15px;
+					color: $colorYellow;
+				}
+				.container-btn {
+					padding: 0;
+					margin-top: 10%;
+					.reset {
+						border: 1px solid white;
+						color: white;
+						border-radius: 20px;
+						padding: 2px 13px;
+						&:hover {
+							background-color: white;
+							color: black;
+						}
+					}
+					.go {
+						margin-left: 20px;
+						background-color: white;
+						color: black;
+						border: 1px solid white;
+						border-radius: 20px;
+						padding: 2px 13px;
+					}
+				}
+			}
+			.cta {
+				@include centerObs(50%, 50%, -50%, -50%);
+				@extend %btn;
+				background-color: transparent;
+				color: white;
+				border: 1px solid white;
+				font-size: 20px;
+			}
+		}
+	}
+}

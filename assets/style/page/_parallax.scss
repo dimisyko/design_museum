@@ -1,0 +1,46 @@
+/*Parallax*/
+.parallax{
+    position: relative;
+        .enterMuseum{
+            @include centerObs(50%, 50%, -50%,-50%); 
+            text-align: center;
+            width: 25%;
+            .link-enter{
+                @extend %btn;
+            }
+        .image-txt{
+            &:nth-child(1){
+                position: initial;
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .image-txt{
+        position: absolute;
+        width: 20%;
+        transition: 0.2s;
+        &:nth-child(2){
+            top: 50%;
+            left: 5%;
+        }
+        &:nth-child(3){
+            left: 60%;
+        }
+        &:nth-child(4){
+            right: 20%;
+            bottom: 10%;
+        }
+        &:nth-child(5){
+            left: 20%;
+            top: 15%;
+            width: 10%;
+        }
+        &:nth-child(6){
+            right: 10%;
+            top: 30%;
+            width: 10%;
+        }
+    }
+}
