@@ -20,7 +20,7 @@ export default function global() {
     }
 
     function animImg() {
-        var listImg = document.querySelector('.list-img-anim')
+        const listImg = document.querySelector('.list-img-anim')
         if (listImg) {
             const offset = getOffset(listImg)
             const PosBounding = offset.top - window.innerHeight / 3.5
@@ -43,7 +43,7 @@ export default function global() {
     function AfterColorExpo() {
         const afterExpo = document.querySelector('.intro')
         if (afterExpo) {
-            var data = afterExpo.getAttribute('data-color')
+            const data = afterExpo.getAttribute('data-color')
             afterExpo.style.setProperty('--color', data)
         }
     }

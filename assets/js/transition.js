@@ -38,7 +38,7 @@ export default function transition() {
     links.forEach(function (link) {
         link.addEventListener('click', function (e) {
             e.preventDefault()
-            var data = link.getAttribute('href')
+            const data = link.getAttribute('href')
             tlLeave()
             setTimeout(function () {
                 window.location.href = data
