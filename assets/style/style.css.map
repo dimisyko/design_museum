@@ -5,7 +5,7 @@
         "style.scss",
         "global/_global.scss",
         "global/_var.scss",
-        "mixin-extend/_mixin-extend.scss",
+        "global/_mixin-extend.scss",
         "page/_parallax.scss",
         "page/_home.scss",
         "page/_single.scss",
