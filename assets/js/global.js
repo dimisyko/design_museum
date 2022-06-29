@@ -12,10 +12,18 @@ export default function global() {
     }
     document.addEventListener('mousemove', cursor)
 
+    function getOffset(el){
+       const offsetEl = el.getBoundingClientRect()
+        return{
+            top : offsetEl.top
+        }
+    }
+    
     function animImg() {
         var listImg = document.querySelector('.list-img-anim')
         if (listImg) {
-            var PosBounding = listImg.getBoundingClientRect().top - window.innerHeight / 3.5
+            const offset = getOffset(listImg)
+            var PosBounding = offset.top - window.innerHeight / 3.5
             var stopAnim = false
             if (PosBounding > window.innerHeight || -PosBounding > window.innerHeight) {
                 listImg.style.transform = 'translate3d(' + stopAnim + 'px, 0px, 0px)'

@@ -13,7 +13,7 @@ export default function form() {
         var prenom = $('#prenom')
         var email = $('#email')
         var confirMail = $('#emailconfirm')
-        var symbole = /^(([^<>()[\]\\.,;:#\s@"]+(\.[^<>()[\]\\.,;:#\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        var regex = /^(([^<>()[\]\\.,;:#\s@"]+(\.[^<>()[\]\\.,;:#\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
         $('form').submit(function (e) {
             e.preventDefault()
@@ -24,7 +24,7 @@ export default function form() {
             } else if (email.val() != confirMail.val()) {
                 $('.erreur').text('Les emails ne sont pas identiques')
 
-            } else if (!email.val().match(symbole)) {
+            } else if (!email.val().match(regex)) {
                 $('.erreur').text("La syntaxe de l'email n'est pas correct")
             } else {
                 $.ajax({
