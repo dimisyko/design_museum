@@ -5,7 +5,7 @@ export default function tlGsap() {
         const bgDetect = document.querySelector('.bg-fixed')
         const bg = document.querySelector('.bg-transi')
         if (imgScaleDetect && imgScale && bgDetect && bg) {
-            let scaleImg = gsap.timeline({
+            const scaleImg = gsap.timeline({
                 scrollTrigger: {
                     trigger: imgScaleDetect,
                     start: 'top top',
@@ -17,7 +17,7 @@ export default function tlGsap() {
                 width: '100vw',
                 height: '100vh',
             })
-            let bgTransi = gsap.timeline({
+            const bgTransi = gsap.timeline({
                 scrollTrigger: {
                     trigger: bgDetect,
                     start: 'top top',
@@ -29,8 +29,8 @@ export default function tlGsap() {
                 height: '100%',
             })
         }
-        let sect = gsap.utils.toArray('.container-expo')
-        var expo = document.querySelector('.actuelle-exposition')
+        const sect = gsap.utils.toArray('.container-expo')
+        const expo = document.querySelector('.actuelle-exposition')
         if (expo) {
             gsap.to(expo, {
                 xPercent: -100 * (sect.length - 1),
@@ -43,7 +43,7 @@ export default function tlGsap() {
                 }
             })
         }
-        let imgExpo = document.querySelectorAll('.Txt_img img')
+        const imgExpo = document.querySelectorAll('.Txt_img img')
         imgExpo.forEach(function (imgsExpo) {
             gsap.from(imgsExpo, {
                 clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",

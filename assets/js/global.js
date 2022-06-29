@@ -1,8 +1,8 @@
 export default function global() {
 
     function cursor(e) {
-        var curseur = document.querySelector('.cursor')
-        var posCursor = {
+        const curseur = document.querySelector('.cursor')
+        const posCursor = {
             x: e.pageX - 10,
             y: (e.pageY - window.pageYOffset) - 10
         }
@@ -18,23 +18,19 @@ export default function global() {
             top : offsetEl.top
         }
     }
-    
+
     function animImg() {
         var listImg = document.querySelector('.list-img-anim')
         if (listImg) {
             const offset = getOffset(listImg)
-            var PosBounding = offset.top - window.innerHeight / 3.5
-            var stopAnim = false
-            if (PosBounding > window.innerHeight || -PosBounding > window.innerHeight) {
-                listImg.style.transform = 'translate3d(' + stopAnim + 'px, 0px, 0px)'
-            } else {
+            const PosBounding = offset.top - window.innerHeight / 3.5
+            if (PosBounding > window.innerHeight || -PosBounding > window.innerHeight) return
                 listImg.style.transform = 'translate3d(' + PosBounding * 0.5 + 'px, 0px, 0px)'
-            }
         }
     }
 
     window.addEventListener('scroll', animImg)
-    var img = document.querySelectorAll('.container-expo .image')
+    const img = document.querySelectorAll('.container-expo .image')
     img.forEach(function (imgs) {
         imgs.addEventListener('mousemove', function () {
             document.querySelector('.bg-gray').style.backgroundColor = imgs.getAttribute('data-bg')
@@ -45,7 +41,7 @@ export default function global() {
     })
 
     function AfterColorExpo() {
-        var afterExpo = document.querySelector('.intro')
+        const afterExpo = document.querySelector('.intro')
         if (afterExpo) {
             var data = afterExpo.getAttribute('data-color')
             afterExpo.style.setProperty('--color', data)
@@ -56,7 +52,7 @@ export default function global() {
     const imgPara = document.querySelectorAll('.image-txt')
     imgPara.forEach(function (el) {
         el.addEventListener('mousemove', function (e) {
-            var posCursor = {
+            const posCursor = {
                 x: e.offsetX - 90,
                 y: e.offsetY - 80
             }
@@ -72,8 +68,8 @@ export default function global() {
         document.getElementById('cookies').style.display = 'none'
     }
 
-    var getCookie = document.cookie
-    var cookie = getCookie.substring(getCookie.indexOf('v'), getCookie.length)
+    const getCookie = document.cookie
+    const cookie = getCookie.substring(getCookie.indexOf('v'), getCookie.length)
 
     if (cookie != 'valider') {
         document.getElementById('cookies').style.display = 'block'
