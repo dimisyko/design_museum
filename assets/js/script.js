@@ -6,4 +6,4 @@ import transition from "./transition.js"
 global()
 tlGsap()
 form()
-transition()
+new transition()
